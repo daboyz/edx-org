@@ -31,20 +31,14 @@ public class EndUserSteps {
     }
 
     @Step
-    public void is_the_course_page() {
-        System.setProperty("Webdriver.chrome.driver", "~//IdeaProjects//Innocamp//chromedriver");
-        coursePage.open();
+    public void go_to_courses_page() {
+        dashboardPage.goToCourses();
     }
 
     @Step
-    public void should_see_current() {
-        assertThat(coursePage.getCurrent(), is(both(greaterThan(1000)).and(lessThan(2000))));
+    public void should_see_current(int lower_limit, int upper_limit) {
+        assertThat(coursePage.getCurrent(), is(both(greaterThan(lower_limit)).and(lessThan(upper_limit))));
 
     }
 
-    //@Step
-    public void looks_for(String term) {
-        //enters(term);
-        //starts_search();
-    }
 }

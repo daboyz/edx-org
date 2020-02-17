@@ -11,7 +11,16 @@ public class DashboardPage extends PageObject {
     @FindBy(xpath="//span[@class='username']")
     private WebElementFacade userName;
 
+    @FindBy(xpath="//a[@class=\"active tab-nav-link\" and text()='\n" +
+            "            Courses\n" +
+            "          ']")
+    private WebElementFacade findCourses;
+
     public String getUsername() {
         return userName.getText();
+    }
+
+    public void goToCourses() {
+        clickOn(findCourses);
     }
 }

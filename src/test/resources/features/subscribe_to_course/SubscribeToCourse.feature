@@ -6,8 +6,7 @@ Feature: Subscribe to course
   Scenario Outline: Check current courses
     Given the user is logged in
     When the user goes to courses page
-    Then they should see the Current is more than 1000 and less than 2000
+    Then they should see the <category> is more than <lower_limit> and less than <upper_limit>
     Examples:
-| category | course |
-| python  | Python course description |
-| java    | Java course description |
+| category | lower_limit | upper_limit |
+| current  | 1000        | 2000        |

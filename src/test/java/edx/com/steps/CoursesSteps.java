@@ -21,12 +21,14 @@ public class CoursesSteps {
 
     @When("the user goes to courses page")
     public void userGetsToCoursesPage(){
-        anton.is_the_course_page();
+        anton.go_to_courses_page();
     }
 
-    @Then("^they should see the Current is more than 1000 and less than 2000$")
-    public void thenTheyShouldSeeCurrent() {
-        anton.should_see_current();
+    @Then("^they should see the current is more than (\\d+) and less than (\\d+)$")
+    public void they_should_see_the_current_is_more_than_and_less_than(int lower_limit, int upper_limit) {
+        // Write code here that turns the phrase above into concrete actions
+        anton.should_see_current(lower_limit, upper_limit);
     }
+
 
 }
