@@ -7,24 +7,24 @@ import cucumber.api.java.en.When;
 
 import edx.com.steps.serenity.EndUserSteps;
 
-public class DefinitionSteps {
+public class CoursesSteps {
 
     @Steps
-    EndUserSteps anna;
+    EndUserSteps anton;
 
-    @Given("the user is on the Wikionary home page")
+    @Given("the user is on the landing page")
     public void givenTheUserIsOnTheWikionaryHomePage() {
-        anna.is_the_home_page();
+        anton.is_the_home_page();
     }
 
-    @When("the user looks up the definition of the word '(.*)'")
+    @When("the user loogs in")
     public void whenTheUserLooksUpTheDefinitionOf(String word) {
-        anna.looks_for(word);
+        anton.looks_for(word);
     }
 
-    @Then("they should see the definition '(.*)'")
+    @Then("they should see the username displayed in upper right corner'")
     public void thenTheyShouldSeeADefinitionContainingTheWords(String definition) {
-        anna.should_see_definition(definition);
+        anton.should_see_definition(definition);
     }
 
 }

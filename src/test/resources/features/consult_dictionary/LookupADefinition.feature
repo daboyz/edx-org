@@ -1,4 +1,4 @@
-Feature: Lookup a definition
+Feature: Log in to
   In order to talk better
   As an English student
   I want to look up word definitions
