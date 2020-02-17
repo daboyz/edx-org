@@ -3,10 +3,15 @@ Feature: Subscribe to course
   As an EDX user
   I want to be able to subscribe to courses
 
-  Scenario Outline: Check current courses
-    Given the user is logged in
-    When the user goes to courses page
-    Then they should see the <category> is more than <lower_limit> and less than <upper_limit>
+  Scenario Outline: Subscribe to course
+    Given user is logged in
+    When user goes to courses page
+    When user searches for course <course>
+    When user opens course page from grid
+    When user enrolls to course
+    Then they should be able to start course
+    When user unenrolls from course
+    Then they should not see <course> on dashboard
     Examples:
-| category | lower_limit | upper_limit |
-| current  | 1000        | 2000        |
+| course                  |
+| Python for Data Science |

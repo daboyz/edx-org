@@ -4,9 +4,9 @@ Feature: Login user
   I want to be able to log in
 
   Scenario Outline: Login user success
-    Given the user is on the landing page
-    When the user logs in as <username>
-    Then they should see the <userinfo> displayed in upper right corner
+    Given user is on landing page
+    When user logs in as <username>
+    Then they should see <userinfo> displayed in upper right corner
     Examples:
-| username                  | userinfo   |
-| humaninterfaced@gmail.com | ashashukqa |
+| username  | userinfo   |
+| testuser1 | ashashukqa |

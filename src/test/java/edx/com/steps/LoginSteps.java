@@ -10,19 +10,19 @@ import edx.com.steps.serenity.EndUserSteps;
 public class LoginSteps {
 
     @Steps
-    EndUserSteps anton;
+    EndUserSteps actor;
 
-    @Given("the user is on the landing page")
+    @Given("user is on landing page")
     public void givenTheUserIsOnTheHomePage() {
-        anton.is_the_home_page();
+        actor.is_the_home_page();
     }
 
-    @When("^the user logs in as humaninterfaced@gmail\\.com$")
-    public void whenTheUserLogsIn() { anton.submits_credentials("humaninterfaced@gmail.com", "123456qwerty"); }
+    @When("^user logs in as testuser1$")
+    public void whenTheUserLogsIn() { actor.submits_credentials("fobejo9285@upcmaill.com", "123456qwerty"); }
 
-    @Then("^they should see the ashashukqa displayed in upper right corner$")
+    @Then("^they should see ashashukqa displayed in upper right corner$")
     public void thenTheyShouldSeeTheirUsername() {
-        anton.should_see_user_info("ashashukqa");
+        actor.should_see_user_info("ashashukqa");
     }
 
 }

@@ -2,3 +2,13 @@ Subscribe to courses
 In order to learn new programming language
 As a user
 I want to be able to look up the course and subscribe
+
+-----
+
+ Scenario Outline: Check current courses
+    Given user is logged in
+    When user goes to courses page
+    Then they should see <category> is more than <lower_limit> and less than <upper_limit>
+    Examples:
+| category | lower_limit | upper_limit |
+| current  | 1000        | 2000        |
