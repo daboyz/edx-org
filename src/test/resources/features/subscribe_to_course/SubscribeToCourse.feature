@@ -3,12 +3,11 @@ Feature: Subscribe to course
   As an EDX user
   I want to be able to subscribe to courses
 
-  Scenario Outline: Subscribing to course
-    Given the user is on the EDX home page
-    When the user looks up the course by the keyword '<keyword>' AND presses Subscribe button
-    Then they should be subscribed to the course '<course>'
-    
+  Scenario Outline: Check current courses
+    Given the user is logged in
+    When the user goes to courses page
+    Then they should see the Current is more than 1000 and less than 2000
     Examples:
-| keyword | course |
+| category | course |
 | python  | Python course description |
 | java    | Java course description |
