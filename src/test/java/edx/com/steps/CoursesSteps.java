@@ -1,5 +1,6 @@
 package edx.com.steps;
 
+import java.util.Properties;
 import net.thucydides.core.annotations.Steps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,18 +14,16 @@ public class CoursesSteps {
     EndUserSteps anton;
 
     @Given("the user is on the landing page")
-    public void givenTheUserIsOnTheWikionaryHomePage() {
+    public void givenTheUserIsOnTheHomePage() {
         anton.is_the_home_page();
     }
 
-    @When("the user loogs in")
-    public void whenTheUserLooksUpTheDefinitionOf(String word) {
-        anton.looks_for(word);
-    }
+    @When("^the user logs in as humaninterfaced@gmail\\.com$")
+    public void whenTheUserLogsIn() { anton.submits__credentials("humaninterfaced@gmail.com", "123456qwerty"); }
 
-    @Then("they should see the username displayed in upper right corner'")
-    public void thenTheyShouldSeeADefinitionContainingTheWords(String definition) {
-        anton.should_see_definition(definition);
+    @Then("^they should see the ashashukqa displayed in upper right corner$")
+    public void thenTheyShouldSeeTheirUsername() {
+        anton.should_see_user_info("ashashukqa");
     }
 
 }

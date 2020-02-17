@@ -1,4 +1,4 @@
-Update definition
-In order to keep the dictionary definitions up to date and accurate
-As the dictionary maintainer
-I want to be able to update definitions in the dictionary
+Login user
+In order to have access to all the features
+As the user
+I want to be able to log in to EDX

@@ -33,8 +33,4 @@ public class LoginPage extends PageObject {
         loginButton.click();
     }
 
-    public String getUsername() {
-        WebElementFacade usernameDisplay = find(By.xpath("//span[@class='username']"));
-        return usernameDisplay.getText();
-    }
 }
